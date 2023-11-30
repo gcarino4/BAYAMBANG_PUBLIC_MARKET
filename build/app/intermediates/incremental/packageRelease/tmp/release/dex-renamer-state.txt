@@ -1,0 +1,4 @@
+#Thu Nov 30 16:41:11 SGT 2023
+base.0=C\:\\_OJT_DOLLENTAS\\repo\\PUBLIC_MARKET\\build\\app\\intermediates\\dex\\release\\minifyReleaseWithR8\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

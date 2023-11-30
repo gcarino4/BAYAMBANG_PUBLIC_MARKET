@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_fade_out.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_fade_in.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_tooltip_enter.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_popup_enter.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_popup_exit.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_slide_out_bottom.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_slide_out_top.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_slide_in_bottom.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_slide_in_top.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/anim/abc_tooltip_exit.xml",
+        "source": "net.nyx.nyxprinter.nyx_printer-appcompat-1.0.2-1:/anim/abc_tooltip_exit.xml"
+    }
+]

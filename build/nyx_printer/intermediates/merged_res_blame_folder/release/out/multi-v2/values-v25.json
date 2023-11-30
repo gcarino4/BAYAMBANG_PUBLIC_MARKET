@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-3\\1b9fb23dec5e2f3e4dd3c0c76b27d34b\\transformed\\appcompat-1.0.2\\res\\values-v25\\values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "net.nyx.nyxprinter.nyx_printer-mergeReleaseResources-11:/values-v25/values-v25.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-3\\1b9fb23dec5e2f3e4dd3c0c76b27d34b\\transformed\\appcompat-1.0.2\\res\\values-v25\\values-v25.xml",
+                    "from": {
+                        "startLines": "2,3,4,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,126,209,308",
+                        "endLines": "2,3,5,7",
+                        "endColumns": "70,82,12,12",
+                        "endOffsets": "121,204,303,414"
+                    }
+                }
+            ]
+        }
+    ]
+}

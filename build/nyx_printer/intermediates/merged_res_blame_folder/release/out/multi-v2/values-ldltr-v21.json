@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "net.nyx.nyxprinter.nyx_printer-mergeReleaseResources-11:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-3\\1b9fb23dec5e2f3e4dd3c0c76b27d34b\\transformed\\appcompat-1.0.2\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "net.nyx.nyxprinter.nyx_printer-merged_res-13:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Admin\\.gradle\\caches\\transforms-3\\1b9fb23dec5e2f3e4dd3c0c76b27d34b\\transformed\\appcompat-1.0.2\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}
