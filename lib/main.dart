@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:public_market/Screens/forgot_password.dart';
+
 import 'package:public_market/Screens/login_screen.dart';
+import 'package:public_market/Screens/settings_screen.dart';
 import 'package:public_market/Screens/splash_screen.dart';
 import 'package:public_market/Screens/home_screen.dart';
 import 'package:public_market/Screens/profile_screen.dart';
@@ -19,9 +20,10 @@ void main() {
         initialRoute: '/',
         routes: {
           '/': (context) => SplashScreen(),
+          '/settings': (context) => SettingsScreen(),
           '/login': (context) => LoginScreen(),
           '/home': (context) => HomeScreen(),
-          '/forgot_password': (context) => ForgotPasswordScreen(),
+
         },
       ),
     ),

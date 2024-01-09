@@ -2,12 +2,11 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:provider/provider.dart';
+
 import 'package:public_market/Screens/home_screen.dart';
 import 'package:public_market/Screens/login_screen.dart';
 import 'package:public_market/Screens/profile_screen.dart';
-import 'package:public_market/Screens/settings_screen.dart';
-import 'package:public_market/Screens/setup_screen.dart';
+
 import 'package:public_market/Screens/summary.dart';
 import 'package:public_market/Screens/upload_data.dart';
 import 'package:sqflite/sqflite.dart';
@@ -352,33 +351,4 @@ class _DownloadDataState extends State<DownloadData> {
     );
   }
 
-  // Widget _buildAmbulantVendorsTable(List<dynamic>? data) {
-  //   if (data != null && data.isNotEmpty) {
-  //     final columns = [
-  //       DataColumn(label: Text('Vendor Code')),
-  //       DataColumn(label: Text('Vendor Name')),
-  //     ];
-  //
-  //     final rows = data.map<DataRow>((item) {
-  //       return DataRow(
-  //         cells: [
-  //           DataCell(Text(item['vendorcode'].toString())),
-  //           DataCell(Text(item['vendorname'].toString())),
-  //         ],
-  //       );
-  //     }).toList();
-  //
-  //     return DataTable(columns: columns, rows: rows);
-  //   } else {
-  //     return Text('No ambulant vendors available');
-  //   }
-  // }
-  //
-  // Widget _buildCashTicketsTable(List<dynamic>? data) {
-  //   if (data != null && data.isNotEmpty) {
-  //     return Text("");
-  //   } else {
-  //     return Text('No cash tickets available');
-  //   }
-  // }
 }

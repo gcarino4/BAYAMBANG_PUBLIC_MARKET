@@ -15,9 +15,9 @@ net.touchcapture.qr.flutterqr.qr_code_scanner-jetified-lifecycle-process-2.4.0-1
 net.touchcapture.qr.flutterqr.qr_code_scanner-jetified-window-1.0.0-beta04-14 C:\Users\Admin\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
 net.touchcapture.qr.flutterqr.qr_code_scanner-main-15 C:\Users\Admin\AppData\Local\Pub\Cache\hosted\pub.dev\qr_code_scanner-1.0.1\android\src\main\res
 net.touchcapture.qr.flutterqr.qr_code_scanner-release-16 C:\Users\Admin\AppData\Local\Pub\Cache\hosted\pub.dev\qr_code_scanner-1.0.1\android\src\release\res
-net.touchcapture.qr.flutterqr.qr_code_scanner-pngs-17 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\generated\res\pngs\release
-net.touchcapture.qr.flutterqr.qr_code_scanner-resValues-18 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\generated\res\resValues\release
-net.touchcapture.qr.flutterqr.qr_code_scanner-rs-19 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\generated\res\rs\release
-net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-20 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\intermediates\incremental\release\mergeReleaseResources\merged.dir
-net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-21 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-22 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\intermediates\merged_res\release
+net.touchcapture.qr.flutterqr.qr_code_scanner-pngs-17 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\generated\res\pngs\release
+net.touchcapture.qr.flutterqr.qr_code_scanner-resValues-18 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\generated\res\resValues\release
+net.touchcapture.qr.flutterqr.qr_code_scanner-rs-19 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\generated\res\rs\release
+net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-20 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\intermediates\incremental\release\mergeReleaseResources\merged.dir
+net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-21 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-22 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\intermediates\merged_res\release

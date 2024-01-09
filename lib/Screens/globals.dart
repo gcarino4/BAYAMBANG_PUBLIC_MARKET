@@ -37,24 +37,38 @@ class IpAddressSingleton {
 
   String ipAddress = ''; // Initialize with an empty string
 }
+class CompanyNameSingleton {
+  static final CompanyNameSingleton _instance = CompanyNameSingleton._internal();
 
-// class IpAddressSingleton {
-//   static final IpAddressSingleton _instance = IpAddressSingleton._internal();
-//
-//   String? _ipAddress;
-//
-//   factory IpAddressSingleton() {
-//     return _instance;
-//   }
-//
-//   IpAddressSingleton._internal();
-//
-//   String? get ipAddress => _ipAddress;
-//
-//   set ipAddress(String? value) {
-//     _ipAddress = value;
-//   }
-// }
+  factory CompanyNameSingleton() {
+    return _instance;
+  }
+
+  CompanyNameSingleton._internal();
+
+  String companyName = ''; // Initialize with an empty string
+
+  void reset() {
+    companyName = '';
+  }
+}
+class BranchNameSingleton {
+  static final BranchNameSingleton _instance = BranchNameSingleton._internal();
+
+  factory BranchNameSingleton() {
+    return _instance;
+  }
+
+  BranchNameSingleton._internal();
+
+  String branchName = ''; // Initialize with an empty string
+
+  void reset() {
+    branchName = '';
+  }
+}
+
+
 
 class TrxnoSingleton {
   static final TrxnoSingleton _instance = TrxnoSingleton._internal();
@@ -73,14 +87,4 @@ class TrxnoSingleton {
 
 }
 
-// class VendorcodeSingleton {
-//   static final VendorcodeSingleton _instance = VendorcodeSingleton._internal();
-//
-//   factory VendorcodeSingleton() {
-//     return _instance;
-//   }
-//
-//   VendorcodeSingleton._internal();
-//
-//   int qrcode = 0; // Initialize with 0
-// }
+

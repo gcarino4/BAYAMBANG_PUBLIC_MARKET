@@ -106,7 +106,8 @@ class _LoginScreenState extends State<LoginScreen> {
               String branchCode = userDataJson['branchcode'] ?? '';
               String companyName = userDataJson['companyname'] ?? '';
               String branchName = userDataJson['branchname'] ?? '';
-
+              CompanyNameSingleton().companyName = companyName;
+              BranchNameSingleton().branchName = branchName;
               // Create a new ApiResponseData object
               ApiResponseData responseData = ApiResponseData(
                 userId: userId,
@@ -292,7 +293,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        '10.0.0', // Replace with your version number
+                        '12.0.0', // Replace with your version number
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 18, // Adjust the font size as needed
@@ -415,11 +416,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       child: Text(
                         'Login',
-                        style: TextStyle(fontSize: 22),
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.white, // Set the text color to white
+                        ),
                       ),
                     ),
                     style: customButtonStyle,
                   ),
+
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: offlineLogin,
@@ -430,7 +435,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       child: Text(
                         'Offline',
-                        style: TextStyle(fontSize: 22),
+                        style: TextStyle(
+                          fontSize: 22,
+                          color: Colors.white, // Set the text color to white
+                        ),
                       ),
                     ),
                     style: offlinecustomButtonStyle,

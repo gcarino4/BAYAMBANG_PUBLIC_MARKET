@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.public_market">
    <application
-        android:label="BAYAMBANG PUBLIC MARKET TICKETING"
+        android:label="PUBLIC MARKET TICKETING"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

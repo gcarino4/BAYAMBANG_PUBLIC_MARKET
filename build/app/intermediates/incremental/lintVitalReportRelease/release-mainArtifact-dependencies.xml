@@ -1,38 +1,38 @@
 <dependencies>
   <compile
-      roots="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:shared_preferences_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_email_sender::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_plugin_android_lifecycle::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:nyx_printer::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sqflite::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:path_provider_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:qr_code_scanner::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:image_picker_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sunmi_printer_plus::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:printing::release,io.flutter:flutter_embedding_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.appcompat:appcompat:1.6.1@aar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.7.2@aar,androidx.appcompat:appcompat-resources:1.6.1@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.customview:customview:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar,androidx.core:core-ktx:1.10.1@aar,androidx.core:core:1.10.1@aar,androidx.core:core:1.10.1@aar,androidx.lifecycle:lifecycle-runtime:2.6.1@aar,androidx.lifecycle:lifecycle-common-java8:2.6.1@jar,androidx.lifecycle:lifecycle-common:2.6.1@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4@jar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:arm64_v8a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:x86_64_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.savedstate:savedstate:1.2.1@aar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.interpolator:interpolator:1.0.0@aar,androidx.annotation:annotation-jvm:1.6.0@jar,androidx.annotation:annotation-experimental:1.3.0@aar,org.jetbrains.kotlin:kotlin-stdlib:1.8.22@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22@jar,org.jetbrains:annotations:16.0.1@jar,androidx.tracing:tracing:1.0.0@aar">
+      roots="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:shared_preferences_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_email_sender::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_plugin_android_lifecycle::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:nyx_printer::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sqflite::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:path_provider_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:qr_code_scanner::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:image_picker_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sunmi_printer_plus::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:printing::release,io.flutter:flutter_embedding_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.appcompat:appcompat:1.6.1@aar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.7.2@aar,androidx.appcompat:appcompat-resources:1.6.1@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.customview:customview:1.0.0@aar,androidx.lifecycle:lifecycle-livedata:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar,androidx.core:core-ktx:1.10.1@aar,androidx.core:core:1.10.1@aar,androidx.core:core:1.10.1@aar,androidx.lifecycle:lifecycle-runtime:2.6.1@aar,androidx.lifecycle:lifecycle-common-java8:2.6.1@jar,androidx.lifecycle:lifecycle-common:2.6.1@jar,androidx.window:window-java:1.0.0-beta04@aar,androidx.window:window:1.0.0-beta04@aar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4@jar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:arm64_v8a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:x86_64_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.savedstate:savedstate:1.2.1@aar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.interpolator:interpolator:1.0.0@aar,androidx.annotation:annotation-jvm:1.6.0@jar,androidx.annotation:annotation-experimental:1.3.0@aar,org.jetbrains.kotlin:kotlin-stdlib:1.8.22@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22@jar,org.jetbrains:annotations:16.0.1@jar,androidx.tracing:tracing:1.0.0@aar">
     <dependency
-        name="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-        simpleName="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar"/>
+        name="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+        simpleName="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:shared_preferences_android::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:shared_preferences_android::release"
         simpleName="io.flutter.plugins.sharedpreferences:shared_preferences_android"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_email_sender::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_email_sender::release"
         simpleName="com.sidlatau.flutteremailsender:flutter_email_sender"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_plugin_android_lifecycle::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_plugin_android_lifecycle::release"
         simpleName="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:nyx_printer::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:nyx_printer::release"
         simpleName="net.nyx.nyxprinter.nyx_printer:nyx_printer"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sqflite::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sqflite::release"
         simpleName="com.tekartik.sqflite:sqflite"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:path_provider_android::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:path_provider_android::release"
         simpleName="io.flutter.plugins.pathprovider:path_provider_android"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:qr_code_scanner::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:qr_code_scanner::release"
         simpleName="net.touchcapture.qr.flutterqr:qr_code_scanner"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:image_picker_android::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:image_picker_android::release"
         simpleName="io.flutter.plugins.imagepicker:image_picker_android"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sunmi_printer_plus::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sunmi_printer_plus::release"
         simpleName="br.com.brasizza.sunmi_printer_plus:sunmi_printer_plus"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:printing::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:printing::release"
         simpleName="net.nfet.flutter.printing:printing"/>
     <dependency
         name="io.flutter:flutter_embedding_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar"
@@ -162,39 +162,39 @@
         simpleName="androidx.tracing:tracing"/>
   </compile>
   <package
-      roots="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:shared_preferences_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_email_sender::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:image_picker_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_plugin_android_lifecycle::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:nyx_printer::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sqflite::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:path_provider_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:qr_code_scanner::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sunmi_printer_plus::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:printing::release,androidx.appcompat:appcompat-resources:1.6.1@aar,androidx.appcompat:appcompat:1.6.1@aar,io.flutter:flutter_embedding_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.7.2@aar,androidx.window:window-java:1.0.0-beta04@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.emoji2:emoji2-views-helper:1.2.0@aar,androidx.emoji2:emoji2:1.2.0@aar,androidx.core:core-ktx:1.10.1@aar,androidx.window:window:1.0.0-beta04@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.10.1@aar,androidx.core:core:1.10.1@aar,androidx.savedstate:savedstate:1.2.1@aar,androidx.lifecycle:lifecycle-livedata:2.6.1@aar,androidx.lifecycle:lifecycle-process:2.6.1@aar,androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar,androidx.lifecycle:lifecycle-common-java8:2.6.1@jar,androidx.lifecycle:lifecycle-common:2.6.1@jar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-runtime:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4@jar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:arm64_v8a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:x86_64_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.exifinterface:exifinterface:1.3.6@aar,androidx.profileinstaller:profileinstaller:1.3.0@aar,androidx.startup:startup-runtime:1.1.1@aar,androidx.tracing:tracing:1.0.0@aar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.resourceinspection:resourceinspection-annotation:1.0.1@jar,androidx.interpolator:interpolator:1.0.0@aar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.concurrent:concurrent-futures:1.1.0@jar,androidx.constraintlayout:constraintlayout:1.1.3@aar,org.aspectj:aspectjrt:1.9.6@jar,com.jakewharton.timber:timber:4.7.1@aar,com.journeyapps:zxing-android-embedded:4.3.0@aar,com.google.zxing:core:3.5.0@jar,androidx.annotation:annotation-experimental:1.3.0@aar,androidx.annotation:annotation-jvm:1.6.0@jar,org.jetbrains.kotlin:kotlin-stdlib:1.8.22@jar,androidx.constraintlayout:constraintlayout-solver:1.1.3@jar,org.jetbrains:annotations:16.0.1@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22@jar,com.google.guava:listenablefuture:1.0@jar">
+      roots="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar:unspecified@jar,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:shared_preferences_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_email_sender::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:image_picker_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_plugin_android_lifecycle::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:nyx_printer::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sqflite::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:path_provider_android::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:qr_code_scanner::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sunmi_printer_plus::release,C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:printing::release,androidx.appcompat:appcompat-resources:1.6.1@aar,androidx.appcompat:appcompat:1.6.1@aar,io.flutter:flutter_embedding_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.fragment:fragment:1.3.6@aar,androidx.activity:activity:1.7.2@aar,androidx.window:window-java:1.0.0-beta04@aar,androidx.drawerlayout:drawerlayout:1.0.0@aar,androidx.emoji2:emoji2-views-helper:1.2.0@aar,androidx.emoji2:emoji2:1.2.0@aar,androidx.core:core-ktx:1.10.1@aar,androidx.window:window:1.0.0-beta04@aar,androidx.viewpager:viewpager:1.0.0@aar,androidx.loader:loader:1.0.0@aar,androidx.vectordrawable:vectordrawable-animated:1.1.0@aar,androidx.vectordrawable:vectordrawable:1.1.0@aar,androidx.customview:customview:1.0.0@aar,androidx.core:core:1.10.1@aar,androidx.core:core:1.10.1@aar,androidx.savedstate:savedstate:1.2.1@aar,androidx.lifecycle:lifecycle-livedata:2.6.1@aar,androidx.lifecycle:lifecycle-process:2.6.1@aar,androidx.lifecycle:lifecycle-livedata-core:2.6.1@aar,androidx.lifecycle:lifecycle-common-java8:2.6.1@jar,androidx.lifecycle:lifecycle-common:2.6.1@jar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel:2.6.1@aar,androidx.lifecycle:lifecycle-runtime:2.6.1@aar,androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1@aar,org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4@jar,org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22@jar,org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22@jar,io.flutter:armeabi_v7a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:arm64_v8a_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,io.flutter:x86_64_release:1.0.0-cdbeda788a293fa29665dc3fa3d6e63bd221cb0d@jar,androidx.exifinterface:exifinterface:1.3.6@aar,androidx.profileinstaller:profileinstaller:1.3.0@aar,androidx.startup:startup-runtime:1.1.1@aar,androidx.tracing:tracing:1.0.0@aar,androidx.cursoradapter:cursoradapter:1.0.0@aar,androidx.resourceinspection:resourceinspection-annotation:1.0.1@jar,androidx.interpolator:interpolator:1.0.0@aar,androidx.versionedparcelable:versionedparcelable:1.1.1@aar,androidx.collection:collection:1.1.0@jar,androidx.arch.core:core-runtime:2.2.0@aar,androidx.arch.core:core-common:2.2.0@jar,androidx.concurrent:concurrent-futures:1.1.0@jar,androidx.constraintlayout:constraintlayout:1.1.3@aar,org.aspectj:aspectjrt:1.9.6@jar,com.jakewharton.timber:timber:4.7.1@aar,com.journeyapps:zxing-android-embedded:4.3.0@aar,com.google.zxing:core:3.5.0@jar,androidx.annotation:annotation-experimental:1.3.0@aar,androidx.annotation:annotation-jvm:1.6.0@jar,org.jetbrains.kotlin:kotlin-stdlib:1.8.22@jar,androidx.constraintlayout:constraintlayout-solver:1.1.3@jar,org.jetbrains:annotations:16.0.1@jar,org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22@jar,com.google.guava:listenablefuture:1.0@jar">
     <dependency
-        name="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-        simpleName="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar"/>
+        name="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+        simpleName="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:shared_preferences_android::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:shared_preferences_android::release"
         simpleName="io.flutter.plugins.sharedpreferences:shared_preferences_android"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_email_sender::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_email_sender::release"
         simpleName="com.sidlatau.flutteremailsender:flutter_email_sender"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:image_picker_android::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:image_picker_android::release"
         simpleName="io.flutter.plugins.imagepicker:image_picker_android"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_plugin_android_lifecycle::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_plugin_android_lifecycle::release"
         simpleName="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:nyx_printer::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:nyx_printer::release"
         simpleName="net.nyx.nyxprinter.nyx_printer:nyx_printer"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sqflite::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sqflite::release"
         simpleName="com.tekartik.sqflite:sqflite"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:path_provider_android::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:path_provider_android::release"
         simpleName="io.flutter.plugins.pathprovider:path_provider_android"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:qr_code_scanner::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:qr_code_scanner::release"
         simpleName="net.touchcapture.qr.flutterqr:qr_code_scanner"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sunmi_printer_plus::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sunmi_printer_plus::release"
         simpleName="br.com.brasizza.sunmi_printer_plus:sunmi_printer_plus"/>
     <dependency
-        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:printing::release"
+        name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:printing::release"
         simpleName="net.nfet.flutter.printing:printing"/>
     <dependency
         name="androidx.appcompat:appcompat-resources:1.6.1@aar"

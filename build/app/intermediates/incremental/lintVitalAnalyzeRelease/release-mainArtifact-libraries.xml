@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar"
-      resolved="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
+      name="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar:unspecified@jar"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar"
+      resolved="__local_aars__:C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\flutter\release\libs.jar:unspecified"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:shared_preferences_android::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\shared_preferences_android\.transforms\64ef9efc97f92eb9461aa6533c36c469\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:shared_preferences_android::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\shared_preferences_android\.transforms\401d7d214bb8b4817a7c1e44eb4c4e77\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.sharedpreferences:shared_preferences_android:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\shared_preferences_android\.transforms\64ef9efc97f92eb9461aa6533c36c469\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\shared_preferences_android\.transforms\401d7d214bb8b4817a7c1e44eb4c4e77\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -17,10 +17,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_email_sender::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\.transforms\87524edbc27752d029778e9b3c3922ad\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_email_sender::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\.transforms\8f53730c1934d934305725b466642b89\transformed\out\jars\classes.jar"
       resolved="com.sidlatau.flutteremailsender:flutter_email_sender:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\.transforms\87524edbc27752d029778e9b3c3922ad\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\.transforms\8f53730c1934d934305725b466642b89\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -30,10 +30,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:flutter_plugin_android_lifecycle::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_plugin_android_lifecycle\.transforms\0faa91e08a8cd97b9bbc72a9ae964bc6\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:flutter_plugin_android_lifecycle::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_plugin_android_lifecycle\.transforms\54a2a64590cdf92ffd20fd33caec5910\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_plugin_android_lifecycle\.transforms\0faa91e08a8cd97b9bbc72a9ae964bc6\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_plugin_android_lifecycle\.transforms\54a2a64590cdf92ffd20fd33caec5910\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -43,10 +43,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:nyx_printer::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\.transforms\fd2e04374b789fe502346ff6ee96e198\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:nyx_printer::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\.transforms\7ef5bad1f4dacf47b7c401488dfb149d\transformed\out\jars\classes.jar"
       resolved="net.nyx.nyxprinter.nyx_printer:nyx_printer:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\.transforms\fd2e04374b789fe502346ff6ee96e198\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\.transforms\7ef5bad1f4dacf47b7c401488dfb149d\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -56,10 +56,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sqflite::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sqflite\.transforms\8cbade23b95787920b8700d2b733e22c\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sqflite::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sqflite\.transforms\9e681b886f66b20ae66a6bd0ef211d89\transformed\out\jars\classes.jar"
       resolved="com.tekartik.sqflite:sqflite:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sqflite\.transforms\8cbade23b95787920b8700d2b733e22c\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sqflite\.transforms\9e681b886f66b20ae66a6bd0ef211d89\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -69,10 +69,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:path_provider_android::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\path_provider_android\.transforms\cb6dc44465224324c6ff8f4aa7739182\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:path_provider_android::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\path_provider_android\.transforms\c86099397929653ae286a62158088a20\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\path_provider_android\.transforms\cb6dc44465224324c6ff8f4aa7739182\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\path_provider_android\.transforms\c86099397929653ae286a62158088a20\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -82,10 +82,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:qr_code_scanner::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\.transforms\3e0cfb825fa25003d07261d89acc8a93\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:qr_code_scanner::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\.transforms\edcb6517a0cec4fa99615a1ceb2ceca0\transformed\out\jars\classes.jar"
       resolved="net.touchcapture.qr.flutterqr:qr_code_scanner:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\.transforms\3e0cfb825fa25003d07261d89acc8a93\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\.transforms\edcb6517a0cec4fa99615a1ceb2ceca0\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -95,10 +95,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:image_picker_android::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\.transforms\8bd74658f76a7c92695637ea94fa14ac\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:image_picker_android::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\.transforms\9f614a9bf136a91531a949aa0ae5caaf\transformed\out\jars\classes.jar"
       resolved="io.flutter.plugins.imagepicker:image_picker_android:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\.transforms\8bd74658f76a7c92695637ea94fa14ac\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\.transforms\9f614a9bf136a91531a949aa0ae5caaf\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -108,10 +108,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:sunmi_printer_plus::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sunmi_printer_plus\.transforms\5b1a926553b9926411e0e8e8df5d5851\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:sunmi_printer_plus::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sunmi_printer_plus\.transforms\6bbdcaaf835e0a981e9b79a191107af2\transformed\out\jars\classes.jar"
       resolved="br.com.brasizza.sunmi_printer_plus:sunmi_printer_plus:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sunmi_printer_plus\.transforms\5b1a926553b9926411e0e8e8df5d5851\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sunmi_printer_plus\.transforms\6bbdcaaf835e0a981e9b79a191107af2\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -121,10 +121,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android@@:printing::release"
-      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\.transforms\7af055d4dfec33eaf68ed284760b7e91\transformed\out\jars\classes.jar"
+      name="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android@@:printing::release"
+      jars="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\.transforms\c28af01b03035611683d31bd4c0b50ee\transformed\out\jars\classes.jar"
       resolved="net.nfet.flutter.printing:printing:unspecified"
-      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\.transforms\7af055d4dfec33eaf68ed284760b7e91\transformed\out"
+      folder="C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\.transforms\c28af01b03035611683d31bd4c0b50ee\transformed\out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"

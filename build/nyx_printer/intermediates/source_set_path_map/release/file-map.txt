@@ -7,9 +7,9 @@ net.nyx.nyxprinter.nyx_printer-jetified-annotation-experimental-1.1.0-5 C:\Users
 net.nyx.nyxprinter.nyx_printer-jetified-window-1.0.0-beta04-6 C:\Users\Admin\.gradle\caches\transforms-3\dee59bb480020f42d53c2ea15e4501f7\transformed\jetified-window-1.0.0-beta04\res
 net.nyx.nyxprinter.nyx_printer-main-7 C:\Users\Admin\AppData\Local\Pub\Cache\hosted\pub.dev\nyx_printer-0.0.1\android\src\main\res
 net.nyx.nyxprinter.nyx_printer-release-8 C:\Users\Admin\AppData\Local\Pub\Cache\hosted\pub.dev\nyx_printer-0.0.1\android\src\release\res
-net.nyx.nyxprinter.nyx_printer-pngs-9 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\generated\res\pngs\release
-net.nyx.nyxprinter.nyx_printer-resValues-10 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\generated\res\resValues\release
-net.nyx.nyxprinter.nyx_printer-rs-11 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\generated\res\rs\release
-net.nyx.nyxprinter.nyx_printer-mergeReleaseResources-12 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\intermediates\incremental\release\mergeReleaseResources\merged.dir
-net.nyx.nyxprinter.nyx_printer-mergeReleaseResources-13 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-net.nyx.nyxprinter.nyx_printer-merged_res-14 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\intermediates\merged_res\release
+net.nyx.nyxprinter.nyx_printer-pngs-9 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\generated\res\pngs\release
+net.nyx.nyxprinter.nyx_printer-resValues-10 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\generated\res\resValues\release
+net.nyx.nyxprinter.nyx_printer-rs-11 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\generated\res\rs\release
+net.nyx.nyxprinter.nyx_printer-mergeReleaseResources-12 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\intermediates\incremental\release\mergeReleaseResources\merged.dir
+net.nyx.nyxprinter.nyx_printer-mergeReleaseResources-13 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+net.nyx.nyxprinter.nyx_printer-merged_res-14 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\intermediates\merged_res\release

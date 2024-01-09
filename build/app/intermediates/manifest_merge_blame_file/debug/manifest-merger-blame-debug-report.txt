@@ -13,26 +13,26 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:34:5-66
-15-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:34:22-64
+15-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:34:5-66
+15-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:34:22-64
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:35:5-80
-16-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:35:22-77
+16-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:35:5-80
+16-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:35:22-77
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-17-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:36:5-81
-17-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:36:22-78
+17-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:36:5-81
+17-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:36:22-78
 18    <uses-permission android:name="android.permission.CAMERA" />
-18-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:37:5-65
-18-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\AndroidManifest.xml:37:22-62
+18-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:37:5-65
+18-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:37:22-62
 19
 20    <queries>
-20-->[:nyx_printer] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-11:15
+20-->[:nyx_printer] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-11:15
 21        <package android:name="net.nyx.printerservice" />
-21-->[:nyx_printer] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-58
-21-->[:nyx_printer] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-55
+21-->[:nyx_printer] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-58
+21-->[:nyx_printer] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-55
 22        <package android:name="woyou.aidlservice.jiuiv5" />
-22-->[:sunmi_printer_plus] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sunmi_printer_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-60
-22-->[:sunmi_printer_plus] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sunmi_printer_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-57
+22-->[:sunmi_printer_plus] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sunmi_printer_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-60
+22-->[:sunmi_printer_plus] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sunmi_printer_plus\intermediates\merged_manifest\debug\AndroidManifest.xml:10:18-57
 23    </queries>
 24
 25    <permission
@@ -89,7 +89,7 @@
 52-->[androidx.core:core:1.10.1] C:\Users\Admin\.gradle\caches\transforms-3\9c9ab1a476c120097a79d748cec7161f\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 53        android:debuggable="true"
 54        android:icon="@mipmap/ic_launcher"
-55        android:label="BAYAMBANG PUBLIC MARKET TICKETING" >
+55        android:label="PUBLIC MARKET TICKETING" >
 56        <activity
 57            android:name="com.example.public_market.MainActivity"
 58            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
@@ -124,55 +124,55 @@
 87            android:value="2" />
 88
 89        <provider
-89-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+89-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 90            android:name="com.sidlatau.flutteremailsender.FlutterEmailSenderFileProvider"
-90-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-90
+90-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-90
 91            android:authorities="com.example.public_market.file_provider"
-91-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-65
+91-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-65
 92            android:exported="false"
-92-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+92-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 93            android:grantUriPermissions="true" >
-93-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+93-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
 94            <meta-data
-94-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:61
+94-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:61
 95                android:name="android.support.FILE_PROVIDER_PATHS"
-95-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+95-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
 96                android:resource="@xml/shared_file_paths" />
-96-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-58
+96-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-58
 97        </provider>
 98        <provider
-98-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+98-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 99            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-99-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
+99-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-82
 100            android:authorities="com.example.public_market.flutter.image_provider"
-100-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
+100-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-74
 101            android:exported="false"
-101-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+101-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 102            android:grantUriPermissions="true" >
-102-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+102-->[:image_picker_android] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
 103            <meta-data
-103-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:61
+103-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:61
 104                android:name="android.support.FILE_PROVIDER_PATHS"
-104-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+104-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
 105                android:resource="@xml/flutter_image_picker_file_paths" />
-105-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-58
+105-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-58
 106        </provider>
 107        <provider
-107-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
+107-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-18:20
 108            android:name="net.nfet.flutter.printing.PrintFileProvider"
-108-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-71
+108-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-71
 109            android:authorities="com.example.public_market.flutter.printing"
-109-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-68
+109-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-68
 110            android:exported="false"
-110-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
+110-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-37
 111            android:grantUriPermissions="true" >
-111-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
+111-->[:printing] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\intermediates\merged_manifest\debug\AndroidManifest.xml:14:13-47
 112            <meta-data
-112-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:61
+112-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-17:61
 113                android:name="android.support.FILE_PROVIDER_PATHS"
-113-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
+113-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:16:17-67
 114                android:resource="@xml/flutter_printing_file_paths" />
-114-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-58
+114-->[:flutter_email_sender] C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\merged_manifest\debug\AndroidManifest.xml:17:17-58
 115        </provider>
 116        <provider
 116-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Admin\.gradle\caches\transforms-3\f3da131123e9b4eccc244f6ad91f009f\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20

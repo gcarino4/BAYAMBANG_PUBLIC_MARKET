@@ -21,21 +21,21 @@ com.example.public_market.app-jetified-emoji2-1.2.0-19 C:\Users\Admin\.gradle\ca
 com.example.public_market.app-jetified-core-ktx-1.10.1-20 C:\Users\Admin\.gradle\caches\transforms-3\f7cdfb73eaf400e8b2c346bb8e6d73ec\transformed\jetified-core-ktx-1.10.1\res
 com.example.public_market.app-lifecycle-livedata-core-2.6.1-21 C:\Users\Admin\.gradle\caches\transforms-3\fb13d994a9c57675c3797fdb5edd3dc7\transformed\lifecycle-livedata-core-2.6.1\res
 com.example.public_market.app-jetified-startup-runtime-1.1.1-22 C:\Users\Admin\.gradle\caches\transforms-3\ff5f5b0a71e9b3e49766bc82725fe9a1\transformed\jetified-startup-runtime-1.1.1\res
-com.example.public_market.app-main-23 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\main\res
-com.example.public_market.app-release-24 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\android\app\src\release\res
-com.example.public_market.app-pngs-25 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\generated\res\pngs\release
-com.example.public_market.app-resValues-26 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\generated\res\resValues\release
-com.example.public_market.app-rs-27 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\generated\res\rs\release
-com.example.public_market.app-mergeReleaseResources-28 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\incremental\release\mergeReleaseResources\merged.dir
-com.example.public_market.app-mergeReleaseResources-29 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\incremental\release\mergeReleaseResources\stripped.dir
-com.example.public_market.app-merged_res-30 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\app\intermediates\merged_res\release
-com.example.public_market.app-packaged_res-31 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_email_sender\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-32 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-33 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\image_picker_android\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-34 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\nyx_printer\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-35 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\path_provider_android\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-36 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\printing\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-37 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\qr_code_scanner\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-38 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\shared_preferences_android\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-39 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sqflite\intermediates\packaged_res\release
-com.example.public_market.app-packaged_res-40 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET\build\sunmi_printer_plus\intermediates\packaged_res\release
+com.example.public_market.app-main-23 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\res
+com.example.public_market.app-release-24 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\release\res
+com.example.public_market.app-pngs-25 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\generated\res\pngs\release
+com.example.public_market.app-resValues-26 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\generated\res\resValues\release
+com.example.public_market.app-rs-27 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\generated\res\rs\release
+com.example.public_market.app-mergeReleaseResources-28 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\incremental\release\mergeReleaseResources\merged.dir
+com.example.public_market.app-mergeReleaseResources-29 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\incremental\release\mergeReleaseResources\stripped.dir
+com.example.public_market.app-merged_res-30 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\app\intermediates\merged_res\release
+com.example.public_market.app-packaged_res-31 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_email_sender\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-32 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-33 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\image_picker_android\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-34 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\nyx_printer\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-35 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\path_provider_android\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-36 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\printing\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-37 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\qr_code_scanner\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-38 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\shared_preferences_android\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-39 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sqflite\intermediates\packaged_res\release
+com.example.public_market.app-packaged_res-40 C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\build\sunmi_printer_plus\intermediates\packaged_res\release

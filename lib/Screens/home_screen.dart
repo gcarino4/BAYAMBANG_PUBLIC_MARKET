@@ -20,7 +20,7 @@ import 'package:sunmi_printer_plus/column_maker.dart';
 import 'package:sunmi_printer_plus/enums.dart';
 import 'package:sunmi_printer_plus/sunmi_printer_plus.dart';
 import 'package:sunmi_printer_plus/sunmi_style.dart';
-import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
+
 
 class HomeScreen extends StatelessWidget {
   final dateController = TextEditingController();
@@ -52,7 +52,9 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
   bool backButtonDisabled = true;
   late Database _database;
   final _nyxPrinterPlugin = NyxPrinter();
-
+  final companyName = CompanyNameSingleton().companyName;
+  final branchName = BranchNameSingleton().branchName;
+  TextEditingController usernameController = TextEditingController();
   List<String> denominations = [];
   List<Map<String, dynamic>> ambulantVendors = [];
   List<TextEditingController> lineTotalControllers = [];
@@ -99,7 +101,7 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
     totalamountController.text = grandTotal.toStringAsFixed(2);
   }
 
-  Future<void> _createPdf() async {
+  Future<void> _createPdf() async {    var userId = usernameController.text;
     try {
       // final image = await rootBundle.load('assets/images/img.png');
       // await _nyxPrinterPlugin.printImage(image.buffer.asUint8List());
@@ -109,7 +111,7 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
       await SunmiPrinter.startTransactionPrint(true);
 
       await SunmiPrinter.printText(
-        "BAYAN NG BAYAMBANG \nLALAWIGAN NG PANGASINAN \n------------------------------------\t PUBLIC MARKET TICKET \t ------------------------------------",
+        "$companyName \n$branchName \n------------------------------------\t PUBLIC MARKET TICKET \t ------------------------------------",
         style: SunmiStyle(
           align: SunmiPrintAlign.CENTER,
           fontSize: SunmiFontSize.MD,
