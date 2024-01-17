@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:public_market/Screens/login_screen.dart';
 import 'package:public_market/Screens/modernalertdialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as path;
 import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'globals.dart';
@@ -22,6 +24,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
   final TextEditingController terminalIdController = TextEditingController();
   final TextEditingController trxnoController = TextEditingController();
   final TextEditingController ipAddressController = TextEditingController();
+  TextEditingController usernameController = TextEditingController();
+
+  List<dynamic>? _lguSetup;
+  Future<dynamic>? _futureJSONResponse;
+
   String? selectedServer; // Use a nullable String
   String? ipAddressLAN;
   String? ipAddressWAN;
@@ -32,15 +39,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
     super.initState();
     BackButtonInterceptor.add(myInterceptor);
     initSharedPreferences();
+    _initDb();
   }
 
 
   @override
   void dispose() {
-super.dispose();
+    super.dispose();
     BackButtonInterceptor.add(myInterceptor);
-
   }
+
   void initSharedPreferences() async {
     prefs = await SharedPreferences.getInstance();
     String? savedServer = prefs.getString('selectedServer');
@@ -61,6 +69,122 @@ super.dispose();
     print('WAN IP Address: $savedIpAddressWAN');
   }
 
+  Future<void> _initDb() async {
+    final path = await _localPath;
+    final databasePath = '$path/setup_data.db';
+    Database database = await openDatabase(databasePath, version: 1,
+        onCreate: (db, version) async {
+
+          await db.execute('''
+        CREATE TABLE IF NOT EXISTS lgu_setup(
+          municipality TEXT UNIQUE,
+          city TEXT,
+          province TEXT
+        )
+      ''');
+
+        });
+
+    _lguSetup = await database.query('lgu_setup');
+
+    print(_lguSetup);
+    database.close();
+  }
+
+  Future<String> get _localPath async {
+    final directory = await getExternalStorageDirectory();
+
+    return directory!.path;
+  }
+
+  Future<dynamic> fetchJSONResponse() async {
+    try {
+      var ipAddress = ipAddressController.text;
+
+      final response = await http.get(
+        Uri.parse('$ipAddress/udp.php?objectcode=ajaxMobilePMRList&type=Download'),
+      );
+
+      if (response.statusCode == 200) {
+        final jsonData = jsonDecode(response.body);
+        _lguSetup = jsonData['city'];
+        return jsonData;
+      } else {
+        throw Exception('Failed to fetch JSON response. Status code: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error in fetchJSONResponse: $e');
+      throw Exception('Failed to fetch JSON response: $e');
+    }
+  }
+
+  Future<void> saveToDatabase() async {
+    try {
+      var ipAddress = ipAddressController.text;
+
+      final externalDirectory = await getExternalStorageDirectory();
+      final databasePath = externalDirectory!.path;
+      final databaseFile = File(path.join(databasePath, 'setup_data.db'));
+      var response = await http.get(
+        Uri.parse('$ipAddress/udp.php?objectcode=ajaxMobilePMRList&type=Download'),
+      );
+
+      if (response.statusCode == 200) {
+        final database = await openDatabase(
+          databaseFile.path,
+          version: 1,
+          onCreate: (db, version) async {
+            print("onCreate callback executed");
+
+            await db.execute(
+                'CREATE TABLE IF NOT EXISTS lgu_setup (municipality TEXT UNIQUE, city TEXT, province TEXT)');
+          },
+        );
+
+        final batch = database.batch();
+
+        batch.delete('lgu_setup');
+
+        if (_lguSetup != null) {
+          for (final setup in _lguSetup!) {
+            batch.insert('lgu_setup', {
+              'municipality': setup['municipality'],
+              'city': setup['city'],
+              'province': setup['province'],
+            });
+          }
+          await batch.commit(); // Commit the changes to the database
+        } else {
+          showDialog(
+            context: context,
+            builder: (context) {
+              return ModernAlertDialog(
+                title: 'Connection Error',
+                description: 'Please check for network connection.',
+                onOkPressed: () {
+                  Navigator.of(context).pop(); // Close the dialog
+
+                  // Navigate to the home screen page
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => SettingsScreen(),
+                    ),
+                  );
+                },
+              );
+            },
+          );
+        }
+      } else {
+        throw Exception('Failed to fetch data from the server. Status code: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error in saveToDatabase: $e');
+      throw Exception('Failed to save data to the database: $e');
+    }
+  }
+
+
   Future<void> savePreferences() async {
     if (selectedServer == 'PRODUCTION SERVER (LAN)') {
       await prefs.setString('ipAddressLAN', ipAddressController.text);
@@ -70,6 +194,7 @@ super.dispose();
 
     print('Saved IP Address: ${ipAddressController.text}');
   }
+
   Future<void> _fetchDataFromDatabase() async {
     final nextNo = trxnoController.text;
     if (nextNo.isEmpty) {
@@ -183,31 +308,31 @@ super.dispose();
                 style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
-            //changelog select a  production server first
-            TextField(
-              controller: ipAddressController,
-              keyboardType: TextInputType.text,
-              onChanged: (value) {
-                // Save IP address whenever it changes
-                savePreferences();
-              },
-              decoration: InputDecoration(
-                hintText: '  APPLICATION SERVER IP',
-                labelText: '  APPLICATION SERVER IP',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+              //changelog select a  production server first
+              TextField(
+                controller: ipAddressController,
+                keyboardType: TextInputType.text,
+                onChanged: (value) {
+                  // Save IP address whenever it changes
+                  savePreferences();
+                },
+                decoration: InputDecoration(
+                  hintText: '  APPLICATION SERVER IP',
+                  labelText: '  APPLICATION SERVER IP',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  contentPadding: EdgeInsets.symmetric(vertical: 10),
+                  labelStyle: TextStyle(fontSize: 20),
+                  hintStyle: TextStyle(
+                    fontSize: 20,
+                    color: Colors.grey, // Change this color to the one you want
+                  ),
                 ),
-                contentPadding: EdgeInsets.symmetric(vertical: 10),
-                labelStyle: TextStyle(fontSize: 20),
-                hintStyle: TextStyle(
-                  fontSize: 20,
-                  color: Colors.grey, // Change this color to the one you want
-                ),
+                style: TextStyle(fontSize: 30),
+                textAlignVertical: TextAlignVertical.bottom,
+                enabled: selectedServer != null, // Disable the text field if no radio button is selected
               ),
-              style: TextStyle(fontSize: 30),
-              textAlignVertical: TextAlignVertical.bottom,
-              enabled: selectedServer != null, // Disable the text field if no radio button is selected
-            ),
 
 
               const SizedBox(height: 10),
@@ -326,6 +451,8 @@ super.dispose();
                   const SizedBox(width: 20),
                   ElevatedButton(
                     onPressed: () {
+                      fetchJSONResponse();
+                      saveToDatabase();
                       if (ipAddressController.text.isEmpty ||
                           terminalIdController.text.isEmpty ||
                           trxnoController.text.isEmpty) {
@@ -337,6 +464,7 @@ super.dispose();
 
                         // Check the database for matching records
                         _fetchDataFromDatabase();
+
                       }
                     },
                     style: ElevatedButton.styleFrom(

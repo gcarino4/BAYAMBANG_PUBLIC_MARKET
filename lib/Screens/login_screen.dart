@@ -293,7 +293,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        '12.0.0', // Replace with your version number
+                        '13.0.0', // Replace with your version number
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 18, // Adjust the font size as needed

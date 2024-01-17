@@ -55,8 +55,13 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
   final companyName = CompanyNameSingleton().companyName;
   final branchName = BranchNameSingleton().branchName;
   TextEditingController usernameController = TextEditingController();
+
   List<String> denominations = [];
   List<Map<String, dynamic>> ambulantVendors = [];
+  String setup_municipality = '';
+  String setup_city = '';
+  String setup_province = '';
+
   List<TextEditingController> lineTotalControllers = [];
   List<TextEditingController> quantityControllers = [];
   List<TextEditingController> unitpriceControllers = [];
@@ -102,152 +107,153 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
   }
 
   Future<void> _createPdf() async {    var userId = usernameController.text;
-    try {
-      // final image = await rootBundle.load('assets/images/img.png');
-      // await _nyxPrinterPlugin.printImage(image.buffer.asUint8List());
+  try {
+    // final image = await rootBundle.load('assets/images/img.png');
+    // await _nyxPrinterPlugin.printImage(image.buffer.asUint8List());
 
-      await SunmiPrinter.initPrinter();
-      await SunmiPrinter.bindingPrinter();
-      await SunmiPrinter.startTransactionPrint(true);
+    await SunmiPrinter.initPrinter();
+    await SunmiPrinter.bindingPrinter();
+    await SunmiPrinter.startTransactionPrint(true);
 
-      await SunmiPrinter.printText(
-        "$companyName \n$branchName \n------------------------------------\t PUBLIC MARKET TICKET \t ------------------------------------",
-        style: SunmiStyle(
-          align: SunmiPrintAlign.CENTER,
-          fontSize: SunmiFontSize.MD,
+    await SunmiPrinter.printText(
+      "$setup_city""$setup_municipality" "\n$setup_province \n------------------------------------\t PUBLIC MARKET TICKET \t ------------------------------------",
+      style: SunmiStyle(
+        align: SunmiPrintAlign.CENTER,
+        fontSize: SunmiFontSize.MD,
 
-        ),
-      );
+      ),
+    );
 
-      // Print line items data
+    // Print line items data
 
-      String transaction = "TRANSACTION NUMBER : ";
-      String transactionNumber = docnoController.text;
-      String date = "DATE               : ";
+    String transaction = "TRANSACTION NUMBER : ";
+    String transactionNumber = docnoController.text;
+    String date = "DATE               : ";
 
-      String dateNumber = dateController.text;
+    String dateNumber = dateController.text;
 
-      String vendor = "VENDOR NAME        : ";
+    String vendor = "VENDOR NAME        : ";
 
-      String vendorNumber = vendornameController.text;
-      await SunmiPrinter.lineWrap(1);
-      await SunmiPrinter.printText(
-        "$transaction $transactionNumber\n$date $dateNumber\n$vendor $vendorNumber\n--------------------------------",
-        style: SunmiStyle(
-          fontSize: SunmiFontSize.MD,
-        ),
-      );
+    String vendorNumber = vendornameController.text;
+    await SunmiPrinter.lineWrap(1);
+    await SunmiPrinter.printText(
+      "$transaction $transactionNumber\n$date $dateNumber\n$vendor $vendorNumber\n--------------------------------",
+      style: SunmiStyle(
+        fontSize: SunmiFontSize.MD,
+      ),
+    );
 
-      await SunmiPrinter.printRow(cols: [
-        ColumnMaker(
-          text: "QUANTITY",
-          width: 10,
-          align: SunmiPrintAlign.LEFT,
-        ),
-        ColumnMaker(
-          // text: "UNIT PRICE",
-          width: 10,
-          align: SunmiPrintAlign.CENTER,
-        ),
-        ColumnMaker(
-          text: "UNIT PRICE",
-          width: 10,
-          align: SunmiPrintAlign.RIGHT,
-        ),
-      ]);
-      // await SunmiPrinter.printText(
-      //   "--------------------------------",
-      //   style: SunmiStyle(
-      //     fontSize: SunmiFontSize.MD,
-      //
-      //   ),
-      //
-      // );
-      for (int i = 0; i < denominations.length; i++) {
-        String quantityText = quantityControllers[i].text;
-        String unitPriceText = unitpriceControllers[i].text;
+    await SunmiPrinter.printRow(cols: [
+      ColumnMaker(
+        text: "QUANTITY",
+        width: 10,
+        align: SunmiPrintAlign.LEFT,
+      ),
+      ColumnMaker(
+        // text: "UNIT PRICE",
+        width: 10,
+        align: SunmiPrintAlign.CENTER,
+      ),
+      ColumnMaker(
+        text: "UNIT PRICE",
+        width: 10,
+        align: SunmiPrintAlign.RIGHT,
+      ),
+    ]);
+    // await SunmiPrinter.printText(
+    //   "--------------------------------",
+    //   style: SunmiStyle(
+    //     fontSize: SunmiFontSize.MD,
+    //
+    //   ),
+    //
+    // );
+    for (int i = 0; i < denominations.length; i++) {
+      String quantityText = quantityControllers[i].text;
+      String unitPriceText = unitpriceControllers[i].text;
 
-        // Skip printing if both quantity and unit price are empty
-        if (quantityText.isNotEmpty && unitPriceText.isNotEmpty) {
-          String quantityLine = quantityText.padRight(16);
-          String unitPriceLine = unitPriceText.padRight(16);
-          await SunmiPrinter.printRow(cols: [
-            ColumnMaker(
-              text: "$quantityLine",
-              width: 10,
-              align: SunmiPrintAlign.LEFT,
-            ),
-            ColumnMaker(
-              // text: "$unitPriceLine",
-              width: 10,
-              align: SunmiPrintAlign.CENTER,
-            ),
-            ColumnMaker(
-              text: "$unitPriceLine",
-              width: 10,
-              align: SunmiPrintAlign.RIGHT,
-            ),
-          ]);
-          // await SunmiPrinter.printText(
-          //   "--------------------------------",
-          //   style: SunmiStyle(
-          //     fontSize: SunmiFontSize.MD,
-          //
-          //   ),
-          //
-          // );
-          // await SunmiPrinter.printText(
-          //   "$quantityLine                             ₱$unitPriceLine---------------------------------------------------- ",
-          //   style: SunmiStyle(
-          //     align: SunmiPrintAlign.CENTER,
-          //     fontSize: SunmiFontSize.MD,
-          //   ),
-          // );
-        }
+      // Skip printing if both quantity and unit price are empty
+      if (quantityText.isNotEmpty && unitPriceText.isNotEmpty) {
+        String quantityLine = quantityText.padRight(16);
+        String unitPriceLine = unitPriceText.padRight(16);
+        await SunmiPrinter.printRow(cols: [
+          ColumnMaker(
+            text: "$quantityLine",
+            width: 10,
+            align: SunmiPrintAlign.LEFT,
+          ),
+          ColumnMaker(
+            // text: "$unitPriceLine",
+            width: 10,
+            align: SunmiPrintAlign.CENTER,
+          ),
+          ColumnMaker(
+            text: "$unitPriceLine",
+            width: 10,
+            align: SunmiPrintAlign.RIGHT,
+          ),
+        ]);
+        // await SunmiPrinter.printText(
+        //   "--------------------------------",
+        //   style: SunmiStyle(
+        //     fontSize: SunmiFontSize.MD,
+        //
+        //   ),
+        //
+        // );
+        // await SunmiPrinter.printText(
+        //   "$quantityLine                             ₱$unitPriceLine---------------------------------------------------- ",
+        //   style: SunmiStyle(
+        //     align: SunmiPrintAlign.CENTER,
+        //     fontSize: SunmiFontSize.MD,
+        //   ),
+        // );
       }
+    }
 
-      // await SunmiPrinter.printText(
-      //   "--------------------------------",
-      //   style: SunmiStyle(
-      //     fontSize: SunmiFontSize.MD,
-      //
-      //   ),
-      //
-      // );
-      String totalamount = "TOTAL AMOUNT :  ₱";
+    // await SunmiPrinter.printText(
+    //   "--------------------------------",
+    //   style: SunmiStyle(
+    //     fontSize: SunmiFontSize.MD,
+    //
+    //   ),
+    //
+    // );
+    String totalamount = "TOTAL AMOUNT :  ₱";
 
-      String totalamountNumber = totalamountController.text;
+    String totalamountNumber = totalamountController.text;
 
-      String totalamountText = "$totalamount$totalamountNumber";
-      await SunmiPrinter.setCustomFontSize(30);
-      await SunmiPrinter.printText(
-        totalamountText,
-        style: SunmiStyle(
-          bold: true,
-          align: SunmiPrintAlign.CENTER,
+    String totalamountText = "$totalamount$totalamountNumber";
+    await SunmiPrinter.setCustomFontSize(30);
+    await SunmiPrinter.printText(
+      totalamountText,
+      style: SunmiStyle(
+        bold: true,
+        align: SunmiPrintAlign.CENTER,
 
-          // fontSize: SunmiFontSize.MD,
-
-          // style: NyxFontStyle.bold,
-        ),
-      );
-      await SunmiPrinter.lineWrap(1);
-      await SunmiPrinter.setAlignment(SunmiPrintAlign.CENTER);
-      await SunmiPrinter.printQRCode(
-        vendorcodeController.text,
+        // fontSize: SunmiFontSize.MD,
 
         // style: NyxFontStyle.bold,
+      ),
+    );
+    await SunmiPrinter.lineWrap(1);
+    await SunmiPrinter.setAlignment(SunmiPrintAlign.CENTER);
+    await SunmiPrinter.printQRCode(
+      vendorcodeController.text,
 
-        // width: 100,
-        // height: 100,
-      );
-      await SunmiPrinter.lineWrap(1);
-      await SunmiPrinter.lineWrap(1);
-      await SunmiPrinter.lineWrap(1);
-    } catch (e) {
-      // Handle exceptions
-    }
+      // style: NyxFontStyle.bold,
+
+      // width: 100,
+      // height: 100,
+    );
+    await SunmiPrinter.lineWrap(1);
+    await SunmiPrinter.lineWrap(1);
+    await SunmiPrinter.lineWrap(1);
+  } catch (e) {
+    // Handle exceptions
   }
+  }
+
   Future<void> _nyxprinter() async {
     try {
       // final image = await rootBundle.load('assets/images/img.png');
@@ -328,6 +334,7 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
       // Handle exceptions
     }
   }
+
   @override
   void initState() {
     super.initState();
@@ -339,9 +346,9 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
     vendorcodeController.text = widget.qrCodeData;
     _initDatabase();
     _setDateToCurrent();
+    _loadSetup();
     _loadData();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-
     // Increment vendor code and document number
   }
 
@@ -550,7 +557,7 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
 
     // Now that the database insert is complete, create the PDF and print
 
-showPrintingDialog(context);
+    showPrintingDialog(context);
     await _createPdf();
 
     await _nyxprinter();
@@ -599,11 +606,47 @@ showPrintingDialog(context);
     docnoController.text = currentDocNo.toString();
   }
 
+  Future<void> _loadSetup() async {
+    final path = await _localPath;
+    final databasePath = '$path/setup_data.db';
+    Database database = await openDatabase(
+      databasePath,
+      version: 1,
+      onCreate: (db, version) async {
+        await db.execute('''
+          CREATE TABLE IF NOT EXISTS lgu_setup(
+            municipality TEXT,
+            city TEXT,
+            province TEXT
+          )
+        ''');
+      },
+    );
+
+    List<Map<String, dynamic>> lguSetup = await database.query('lgu_setup');
+
+    // Check if lguSetup is not empty
+    if (lguSetup.isNotEmpty) {
+      // Assuming you have only one row in the lgu_setup table
+      Map<String, dynamic> setupData = lguSetup.first;
+
+      // Extract values from the setupData
+      setup_municipality = setupData['municipality'] ?? '';
+      setup_city = setupData['city'] ?? '';
+      setup_province = setupData['province'] ?? '';
+    }
+
+    // Now you can use municipality, city, and province globally
+    // print('Municipality: $setup_municipality, City: $setup_city, Province: $setup_province');
+  }
+
+
   Future<void> _loadData() async {
     final path = await _localPath;
     final databasePath = '$path/downloaded_data.db';
-    Database database = await openDatabase(databasePath, version: 1,
+    Database database = await openDatabase(databasePath, version: 2,
         onCreate: (db, version) async {
+
           await db.execute('''
         CREATE TABLE IF NOT EXISTS cash_tickets(
           id INTEGER PRIMARY KEY,
@@ -617,13 +660,17 @@ showPrintingDialog(context);
           vendorname TEXT
         )
       ''');
+
+
         });
 
     // Count the items in the 'denomination' column of 'cash_tickets'
     int? denominationCount = Sqflite.firstIntValue(
         await database.rawQuery('SELECT COUNT(*) FROM cash_tickets'));
+
     List<Map<String, dynamic>> cashTicketsData =
     await database.query('cash_tickets');
+
     List<String> extractedDenominations = cashTicketsData
         .map<String>((row) => row['denomination'] as String)
         .toList();
@@ -781,6 +828,7 @@ showPrintingDialog(context);
 
     });
   }
+
   void showPrintingDialog(BuildContext context) {
     showDialog(
       context: context,
@@ -804,6 +852,7 @@ showPrintingDialog(context);
       },
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
@@ -991,7 +1040,7 @@ showPrintingDialog(context);
                             _fetchDataFromDatabase();
                           },
                         )
-,
+                        ,
 
                       ),
                       IconButton(
@@ -1299,6 +1348,7 @@ showPrintingDialog(context);
       ),
     );
   }
+
 }
 
 class CustomProgressDialog extends StatelessWidget {
@@ -1339,6 +1389,3 @@ class CustomProgressDialog extends StatelessWidget {
     );
   }
 }
-// void main() {
-//   runApp(HomeScreen());
-// }
