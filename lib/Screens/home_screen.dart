@@ -428,7 +428,7 @@ class _ReceiptPrinterScreenState extends State<ReceiptPrinterScreen> {
               id INTEGER PRIMARY KEY,
               vendorcode TEXT,
               docno TEXT,
-              date TEXT,
+              date TEXT, 
               vendorname TEXT,
               quantity INTEGER,
               unitprice REAL,

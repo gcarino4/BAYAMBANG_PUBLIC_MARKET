@@ -27,6 +27,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   TextEditingController usernameController = TextEditingController();
 
   List<dynamic>? _lguSetup;
+  List<dynamic>? _lguLogo;
   Future<dynamic>? _futureJSONResponse;
 
   String? selectedServer; // Use a nullable String
@@ -82,12 +83,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
           province TEXT
         )
       ''');
-
+          await db.execute('''
+        CREATE TABLE IF NOT EXISTS lgu_logo(
+          logo TEXT
+        )
+      ''');
         });
 
     _lguSetup = await database.query('lgu_setup');
+    _lguLogo = await database.query('lgu_logo');
 
     print(_lguSetup);
+    print(_lguLogo);
     database.close();
   }
 
@@ -108,6 +115,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
       if (response.statusCode == 200) {
         final jsonData = jsonDecode(response.body);
         _lguSetup = jsonData['city'];
+        _lguLogo = jsonData['logo'];
+
         return jsonData;
       } else {
         throw Exception('Failed to fetch JSON response. Status code: ${response.statusCode}');
@@ -138,14 +147,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
             await db.execute(
                 'CREATE TABLE IF NOT EXISTS lgu_setup (municipality TEXT UNIQUE, city TEXT, province TEXT)');
+            await db.execute(
+                'CREATE TABLE IF NOT EXISTS lgu_logo (logo TEXT)');
           },
         );
 
         final batch = database.batch();
 
         batch.delete('lgu_setup');
+        batch.delete('lgu_logo');
 
-        if (_lguSetup != null) {
+
+        if (_lguLogo != null && _lguLogo != null) {
+
+          // Assuming _lguLogo is a string containing Base64 encoded data
+          String cleanedLogo = _lguLogo.toString();
+// Check if the string starts and ends with brackets
+          if (cleanedLogo.startsWith('[') && cleanedLogo.endsWith(']')) {
+            // Remove the starting and ending brackets
+            cleanedLogo = cleanedLogo.substring(1, cleanedLogo.length - 1);
+          }
+
+          batch.insert('lgu_logo', {
+            'logo': cleanedLogo,  // Use the cleaned logo string without brackets
+          });
+
           for (final setup in _lguSetup!) {
             batch.insert('lgu_setup', {
               'municipality': setup['municipality'],
@@ -154,7 +180,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
             });
           }
           await batch.commit(); // Commit the changes to the database
-        } else {
+        }
+
+        else {
           showDialog(
             context: context,
             builder: (context) {
