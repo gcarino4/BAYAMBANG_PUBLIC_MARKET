@@ -33,6 +33,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
   String? selectedServer; // Use a nullable String
   String? ipAddressLAN;
   String? ipAddressWAN;
+  late Uint8List _bytesImage;
+  late String _imgString = '';
   bool matchFound = false;
   late SharedPreferences prefs;
 
@@ -91,11 +93,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
         });
 
     _lguSetup = await database.query('lgu_setup');
-    _lguLogo = await database.query('lgu_logo');
 
+    final List<Map<String, dynamic>> logoString = await database.query('lgu_logo');
+
+    if (logoString.isNotEmpty) {
+      setState(() {
+        _imgString = logoString.first.values.first.toString();
+      });
+    }
+
+    else {
+      print('External storage directory not available.');
+    }
     print(_lguSetup);
-    print(_lguLogo);
+    print(_imgString);
+
+
     database.close();
+
+    _convertBase64ToImage();
   }
 
   Future<String> get _localPath async {
@@ -212,6 +228,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
     }
   }
 
+  void _convertBase64ToImage() async {
+    setState(() {
+      _bytesImage = Base64Decoder().convert(_imgString);
+    });
+
+    // Get the directory for storing images
+    final directory = await getExternalStorageDirectory();
+    final file = File('${directory?.path}/my_image.png');
+    // Write the file
+    file.writeAsBytes(_bytesImage);
+  }
 
   Future<void> savePreferences() async {
     if (selectedServer == 'PRODUCTION SERVER (LAN)') {
