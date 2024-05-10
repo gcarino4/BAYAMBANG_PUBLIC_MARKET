@@ -483,7 +483,39 @@ class _UploadDataState extends State<UploadData> {
 
     return "$uploadedCount/${records.length} records uploaded.";
   }
+  Future<File> getImageFromExternalStorage() async {
+    // Get the external storage directory
+    Directory? externalDir = await getExternalStorageDirectory();
 
+    if (externalDir == null) {
+      throw FileSystemException("External storage directory not found.");
+    }
+
+    // Construct the file path
+    String filePath = '${externalDir.path}/my_image.png';
+
+    // Check if the file exists and is not empty
+    File imageFile = File(filePath);
+    if (!await imageFile.exists() || (await imageFile.length() == 0)) {
+      // If the file doesn't exist or is empty, return null
+      return Future.error(FileSystemException("Image file not found or empty."));
+    }
+
+    // Return the file
+    return imageFile;
+  }
+
+
+// Example usage:
+  void main() async {
+    try {
+      File imageFile = await getImageFromExternalStorage();
+      // Now you can use 'imageFile' wherever you need
+      print("Image file retrieved: ${imageFile.path}");
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
   Future<String?> retrieveDataAndConvertToJson() async {
     final List<Map<String, dynamic>>? data = await retrieveDataFromDatabase();
     if (data == null) {
@@ -505,36 +537,47 @@ class _UploadDataState extends State<UploadData> {
         }
         return false;
       },child:Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.white,
-          iconTheme:  IconThemeData(
-            color: Colors.black,
-            size: 40, // Set the size of the AppBar buttons
-          ),
-          title: Center(
-            child: Padding(
-              padding:  EdgeInsets.fromLTRB(0, 0, 0, 0),
-              child: Center(
-                child: Image.asset(
-                  'assets/images/logo.png', // Replace this with the path to your image
-                  height: 60, // Set the height of the image
-                ),
+      appBar:  AppBar(
+        backgroundColor: Colors.white,
+        iconTheme: const IconThemeData(
+          color: Colors.black,
+          size: 40,
+        ),
+        title: Row(
+          mainAxisAlignment:
+          MainAxisAlignment.center, // Center the logo horizontally
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 0, 50, 0),
+              child: FutureBuilder<File>(
+                future: getImageFromExternalStorage(),
+                builder: (context, snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return CircularProgressIndicator();
+                  } else if (snapshot.hasError || !snapshot.hasData) {
+                    // Display default image when external storage is empty or there's an error
+                    return Image.asset(
+                      'assets/images/logo.png',
+                      height: 60,
+                    );
+                  } else {
+                    // Use the image from external storage when available
+                    return Image.file(
+                      snapshot.data!,
+                      height: 60,
+                    );
+                  }
+                },
               ),
             ),
-          ),
-          elevation: 0,
-          toolbarHeight: 80,
-          actions: [
-
-            SizedBox(
-              width: 60, // Set the width of the IconButton
-              height: 60, // Set the height of the IconButton
-              child: Align(
-                alignment: Alignment
-                    .centerRight, // Set the alignment of the IconButton
-              ),
-            ),
-          ]),
+          ],
+        ),
+        elevation: 0,
+        toolbarHeight: 80,
+        actions: const [
+          // Add your actions here
+        ],
+      ),
       drawer: buildSidebar(),
       // Add the sidebar here
       body: Column(

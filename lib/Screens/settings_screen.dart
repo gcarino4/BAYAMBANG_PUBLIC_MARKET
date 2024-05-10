@@ -72,6 +72,53 @@ class _SettingsScreenState extends State<SettingsScreen> {
     print('WAN IP Address: $savedIpAddressWAN');
   }
 
+
+
+  Future<dynamic> fetchJSONResponse() async {
+    try {
+      var ipAddress = ipAddressController.text;
+
+      final response = await http.get(
+        Uri.parse('$ipAddress/udp.php?objectcode=ajaxMobilePMRList&type=Download'),
+      );
+
+      if (response.statusCode == 200) {
+        final jsonData = jsonDecode(response.body);
+        _lguSetup = jsonData['city'];
+        _lguLogo = jsonData['logo'];
+        _lguLogo = jsonData['logo'];
+
+        return jsonData;
+      } else {
+        throw Exception('Failed to fetch JSON response. Status code: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error in fetchJSONResponse: $e');
+      throw Exception('Failed to fetch JSON response: $e');
+    }
+  }
+  Future<File> getImageFromExternalStorage() async {
+    // Get the external storage directory
+    Directory? externalDir = await getExternalStorageDirectory();
+
+    if (externalDir == null) {
+      throw FileSystemException("External storage directory not found.");
+    }
+
+    // Construct the file path
+    String filePath = '${externalDir.path}/my_image.png';
+
+    // Check if the file exists and is not empty
+    File imageFile = File(filePath);
+    if (!await imageFile.exists() || (await imageFile.length() == 0)) {
+      // If the file doesn't exist or is empty, return null
+      return Future.error(FileSystemException("Image file not found or empty."));
+    }
+
+    // Return the file
+    return imageFile;
+  }
+
   Future<void> _initDb() async {
     final path = await _localPath;
     final databasePath = '$path/setup_data.db';
@@ -119,30 +166,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
     return directory!.path;
   }
-
-  Future<dynamic> fetchJSONResponse() async {
+// Example usage:
+  void main() async {
     try {
-      var ipAddress = ipAddressController.text;
-
-      final response = await http.get(
-        Uri.parse('$ipAddress/udp.php?objectcode=ajaxMobilePMRList&type=Download'),
-      );
-
-      if (response.statusCode == 200) {
-        final jsonData = jsonDecode(response.body);
-        _lguSetup = jsonData['city'];
-        _lguLogo = jsonData['logo'];
-
-        return jsonData;
-      } else {
-        throw Exception('Failed to fetch JSON response. Status code: ${response.statusCode}');
-      }
+      File imageFile = await getImageFromExternalStorage();
+      // Now you can use 'imageFile' wherever you need
+      print("Image file retrieved: ${imageFile.path}");
     } catch (e) {
-      print('Error in fetchJSONResponse: $e');
-      throw Exception('Failed to fetch JSON response: $e');
+      print("Error: $e");
     }
   }
-
   Future<void> saveToDatabase() async {
     try {
       var ipAddress = ipAddressController.text;
@@ -320,15 +353,28 @@ class _SettingsScreenState extends State<SettingsScreen> {
           description: message,
         );
       },
-    ).then((_) {
+    ).then((_) async {
       if (message == 'Information set successfully.') {
-        Navigator.pushReplacement(
+        await saveToDatabase(); // Save to database first
+        Navigator.pop(context); // Close the dialog
+        setState(() {}); // Refresh the SettingsScreen
+        await Future.delayed(Duration(milliseconds: 300)); // Delay for 300 milliseconds
+        Navigator.pushReplacement( // Navigate to the LoginScreen
           context,
           MaterialPageRoute(builder: (context) => LoginScreen()),
         );
       }
     });
   }
+
+
+
+
+
+
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -343,9 +389,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 50, 0),
               child: Center(
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  height: 60,
+                child: FutureBuilder<File>(
+                  future: getImageFromExternalStorage(),
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return CircularProgressIndicator();
+                    } else if (snapshot.hasError || !snapshot.hasData) {
+                      // Display default image when external storage is empty or there's an error
+                      return Image.asset(
+                        'assets/images/logo.png', // Default image asset
+                        height: 60,
+                      );
+                    } else {
+                      // Use the image from external storage when available
+                      return Image.file(
+                        snapshot.data!,
+                        height: 60,
+                      );
+                    }
+                  },
                 ),
               ),
             ),
@@ -353,6 +415,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           elevation: 0,
           toolbarHeight: 80,
         ),
+
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
