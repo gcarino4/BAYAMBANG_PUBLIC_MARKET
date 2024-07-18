@@ -88,8 +88,8 @@
 48-->[androidx.core:core:1.10.1] C:\Users\Admin\.gradle\caches\transforms-3\9c9ab1a476c120097a79d748cec7161f\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 49        android:icon="@mipmap/ic_launcher"
 49-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:6:9-43
-50        android:label="BAYAMBANG PUBLIC MARKET TICKETING" >
-50-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:4:9-58
+50        android:label="PUBLIC MARKET TICKETING" >
+50-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:4:9-48
 51        <activity
 51-->C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:7:9-27:20
 52            android:name="com.example.public_market.MainActivity"

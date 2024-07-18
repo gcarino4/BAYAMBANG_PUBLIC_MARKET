@@ -7,7 +7,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:public_market/Screens/settings_screen.dart';
 import 'package:public_market/Screens/home_screen.dart';
 import 'package:public_market/Screens/modernalertdialog.dart';
-
+import 'dart:convert';
+import 'dart:typed_data';
+import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+import 'dart:convert';
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:sqflite/sqflite.dart';
 import 'ProfileData.dart';
 import 'globals.dart';
 
@@ -29,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
     super.initState();
     // Load the 'Remember Me' preference from local storage during initialization
     loadRememberMePreference();
+
   }
 
   Future<void> loadRememberMePreference() async {
@@ -42,7 +51,6 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     });
   }
-
 
   Future<void> saveRememberMePreference(bool value) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -204,7 +212,12 @@ class _LoginScreenState extends State<LoginScreen> {
       print('Error occurred: $e');
     }
   }
+
+
+
+
   String savedUsername = UsernameSingleton().username;
+
   Future<void> offlineLogin() async {
     // Check if 'Remember Me' is enabled
     if (rememberMe) {
@@ -276,7 +289,39 @@ class _LoginScreenState extends State<LoginScreen> {
     padding: EdgeInsets.symmetric(
         vertical: 10, horizontal: 50), // Adjust vertical value
   );
+  Future<File> getImageFromExternalStorage() async {
+    // Get the external storage directory
+    Directory? externalDir = await getExternalStorageDirectory();
 
+    if (externalDir == null) {
+      throw FileSystemException("External storage directory not found.");
+    }
+
+    // Construct the file path
+    String filePath = '${externalDir.path}/my_image.png';
+
+    // Check if the file exists and is not empty
+    File imageFile = File(filePath);
+    if (!await imageFile.exists() || (await imageFile.length() == 0)) {
+      // If the file doesn't exist or is empty, return null
+      return Future.error(FileSystemException("Image file not found or empty."));
+    }
+
+    // Return the file
+    return imageFile;
+  }
+
+
+// Example usage:
+  void main() async {
+    try {
+      File imageFile = await getImageFromExternalStorage();
+      // Now you can use 'imageFile' wherever you need
+      print("Image file retrieved: ${imageFile.path}");
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -293,7 +338,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        '13.0.0', // Replace with your version number
+                        '15.0.0', // Replace with your version number
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 18, // Adjust the font size as needed
@@ -313,16 +358,34 @@ class _LoginScreenState extends State<LoginScreen> {
                         },
                       ),
                       SizedBox(width: 8), // Adjust the spacing between icon and text
-
                     ],
                   ),
 
-
-                  Image.asset(
-                    'assets/images/logo.png',
-                    width: 275,
-                    height: 275,
+                  FutureBuilder<File>(
+                    future: getImageFromExternalStorage(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator();
+                      } else if (snapshot.hasError || !snapshot.hasData) {
+                        // Display default image when external storage is empty or there's an error
+                        return Image.asset(
+                          'assets/images/logo.png',
+                          width: 275,
+                          height: 275,
+                        );
+                      } else {
+                        // Use the image from external storage when available
+                        return Image.file(
+                          snapshot.data!,
+                          width: 275,
+                          height: 275,
+                        );
+                      }
+                    },
                   ),
+
+
+
                   SizedBox(height: 20),
                   Text(
                     'PUBLIC MARKET TICKETING',
@@ -424,7 +487,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     style: customButtonStyle,
                   ),
-
                   SizedBox(height: 10),
                   ElevatedButton(
                     onPressed: offlineLogin,

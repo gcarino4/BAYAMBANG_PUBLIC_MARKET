@@ -30,7 +30,7 @@ MERGED from [com.journeyapps:zxing-android-embedded:4.3.0] C:\Users\Admin\.gradl
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.10.1] C:\Users\Admin\.gradle\caches\transforms-3\9c9ab1a476c120097a79d748cec7161f\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:4:9-58
+		ADDED from C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:4:9-48
 	android:icon
 		ADDED from C:\_OJT_DOLLENTAS\repo\PUBLIC_MARKET - BAYAMBANG\android\app\src\main\AndroidManifest.xml:6:9-43
 	android:name

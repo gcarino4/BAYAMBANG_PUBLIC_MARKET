@@ -71,32 +71,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
     print('LAN IP Address: $savedIpAddressLAN');
     print('WAN IP Address: $savedIpAddressWAN');
   }
-
-
-
-  Future<dynamic> fetchJSONResponse() async {
-    try {
-      var ipAddress = ipAddressController.text;
-
-      final response = await http.get(
-        Uri.parse('$ipAddress/udp.php?objectcode=ajaxMobilePMRList&type=Download'),
-      );
-
-      if (response.statusCode == 200) {
-        final jsonData = jsonDecode(response.body);
-        _lguSetup = jsonData['city'];
-        _lguLogo = jsonData['logo'];
-        _lguLogo = jsonData['logo'];
-
-        return jsonData;
-      } else {
-        throw Exception('Failed to fetch JSON response. Status code: ${response.statusCode}');
-      }
-    } catch (e) {
-      print('Error in fetchJSONResponse: $e');
-      throw Exception('Failed to fetch JSON response: $e');
-    }
-  }
   Future<File> getImageFromExternalStorage() async {
     // Get the external storage directory
     Directory? externalDir = await getExternalStorageDirectory();
@@ -119,6 +93,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return imageFile;
   }
 
+
+// Example usage:
+  void main() async {
+    try {
+      File imageFile = await getImageFromExternalStorage();
+      // Now you can use 'imageFile' wherever you need
+      print("Image file retrieved: ${imageFile.path}");
+    } catch (e) {
+      print("Error: $e");
+    }
+  }
   Future<void> _initDb() async {
     final path = await _localPath;
     final databasePath = '$path/setup_data.db';
@@ -166,16 +151,31 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
     return directory!.path;
   }
-// Example usage:
-  void main() async {
+
+  Future<dynamic> fetchJSONResponse() async {
     try {
-      File imageFile = await getImageFromExternalStorage();
-      // Now you can use 'imageFile' wherever you need
-      print("Image file retrieved: ${imageFile.path}");
+      var ipAddress = ipAddressController.text;
+
+      final response = await http.get(
+        Uri.parse('$ipAddress/udp.php?objectcode=ajaxMobilePMRList&type=Download'),
+      );
+
+      if (response.statusCode == 200) {
+        final jsonData = jsonDecode(response.body);
+        _lguSetup = jsonData['city'];
+        _lguLogo = jsonData['logo'];
+        _lguLogo = jsonData['logo'];
+
+        return jsonData;
+      } else {
+        throw Exception('Failed to fetch JSON response. Status code: ${response.statusCode}');
+      }
     } catch (e) {
-      print("Error: $e");
+      print('Error in fetchJSONResponse: $e');
+      throw Exception('Failed to fetch JSON response: $e');
     }
   }
+
   Future<void> saveToDatabase() async {
     try {
       var ipAddress = ipAddressController.text;
@@ -235,12 +235,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
           showDialog(
             context: context,
             builder: (context) {
+
               return ModernAlertDialog(
                 title: 'Connection Error',
                 description: 'Please check for network connection.',
                 onOkPressed: () {
                   Navigator.of(context).pop(); // Close the dialog
-
                   // Navigate to the home screen page
                   Navigator.of(context).pushReplacement(
                     MaterialPageRoute(
@@ -353,26 +353,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
           description: message,
         );
       },
-    ).then((_) async {
+    ).then((_) {
       if (message == 'Information set successfully.') {
-        await saveToDatabase(); // Save to database first
-        Navigator.pop(context); // Close the dialog
-        setState(() {}); // Refresh the SettingsScreen
-        await Future.delayed(Duration(milliseconds: 300)); // Delay for 300 milliseconds
-        Navigator.pushReplacement( // Navigate to the LoginScreen
+        Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => LoginScreen()),
+          MaterialPageRoute(builder: (context) => SettingsScreen()),
         );
+
+        // Delay for 0.5 seconds before navigating to LoginScreen
+        Future.delayed(Duration(milliseconds: 500), () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => LoginScreen()),
+          );
+        });
       }
+
     });
   }
-
-
-
-
-
-
-
 
 
 
@@ -385,10 +383,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title: Center(
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 50, 0),
-              child: Center(
+          iconTheme: const IconThemeData(
+            color: Colors.black,
+            size: 40,
+          ),
+          automaticallyImplyLeading: false, // Removes the back button
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center, // Center the logo horizontally
+            children: [
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 50, 0),
                 child: FutureBuilder<File>(
                   future: getImageFromExternalStorage(),
                   builder: (context, snapshot) {
@@ -397,7 +401,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     } else if (snapshot.hasError || !snapshot.hasData) {
                       // Display default image when external storage is empty or there's an error
                       return Image.asset(
-                        'assets/images/logo.png', // Default image asset
+                        'assets/images/logo.png',
                         height: 60,
                       );
                     } else {
@@ -410,13 +414,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   },
                 ),
               ),
-            ),
+            ],
           ),
           elevation: 0,
           toolbarHeight: 80,
+          actions: const [
+            // Add your actions here
+          ],
         ),
 
-        body: Padding(
+          body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
